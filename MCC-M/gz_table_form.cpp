@@ -1,0 +1,54 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include <DateUtils.hpp>
+
+
+#include "gz_table_form.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+Tgz_table_frm *gz_table_frm;
+//---------------------------------------------------------------------------
+AnsiString RsMks[8]; //Состав строки РС МКС
+int Day; //День недели
+AnsiString days[] = { "воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота" };
+
+AnsiString TestDate="19.09.19";
+
+//Даты ввода в состав РС МКС объектов
+AnsiString ZARYA_LAUNCH_DATE="20.11.98";
+AnsiString DateString;
+AnsiString TimeString;
+//---------------------------------------------------------------------------
+void PRisV(){
+ /*RsMks[0]=
+   RsMks[1]=
+ */
+}
+//---------------------------------------------------------------------------
+__fastcall Tgz_table_frm::Tgz_table_frm(TComponent* Owner)
+        : TForm(Owner)
+{
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall Tgz_table_frm::DMB_timerTimer(TObject *Sender)    //Таймер 1000 мс
+{
+RsMks[5]="СОЮЗ МС-12";
+Day = DayOfWeek(Now());                             //Текущий день недели
+day_name->Caption=days[Day-1];                      //Проверка номера дня
+RsMksString->Caption="РС МКС ( \"ЗАРЯ\" / \"ЗВЕЗДА\" \"ПИРС\" / \"ПОИСК\" / \"РАССВЕТ\" / \"",RsMks[5],"\" / \"";         //Строка РС МКС
+DayYearN->Caption=IntToStr(DayOfTheYear(Now()));    //Сутки года
+date_string->Caption=DateString;                    //Вывод даты локальной
+DateString = FormatDateTime("mm/dd/yy", Now());     //Форматирование даты ДД-ММ-ГГ
+TimeString = FormatDateTime("hh/nn/ss", Now());     //Форматирование времени ЧЧ-ММ-СС
+dmt->Caption=TimeString;                            //Вывод времени локального
+obj_data->Caption=IntToStr(DaysBetween(ZARYA_LAUNCH_DATE,/*Now()*/TestDate));                             //Сутки полета объектов
+
+}
+//---------------------------------------------------------------------------
+
+

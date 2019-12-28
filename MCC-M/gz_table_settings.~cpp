@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "gz_table_settings.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+Tgz_table_sett *gz_table_sett;
+//---------------------------------------------------------------------------
+__fastcall Tgz_table_sett::Tgz_table_sett(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------

@@ -1,6 +1,8 @@
 //---------------------------------------------------------------------------
 
 #include <vcl.h>
+#include "data.h"
+
 #pragma hdrstop
 
 #include "gz_table_settings.h"
@@ -9,7 +11,7 @@
 #pragma resource "*.dfm"
 Tgz_table_sett *gz_table_sett;
 
-AnsiString rs_items[8];       //Массив строки РС МКС
+extern AnsiString rs_items[8];       //Массив строки РС МКС
 
 //---------------------------------------------------------------------------
 __fastcall Tgz_table_sett::Tgz_table_sett(TComponent* Owner)
@@ -28,6 +30,7 @@ rs_items[4]=rm_item5->Text;
 rs_items[5]=rm_item6->Text;
 rs_items[6]=rm_item7->Text;
 rs_items[7]=rm_item8->Text;
+//TK=rs_items;
 }
 //---------------------------------------------------------------------------
 

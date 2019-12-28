@@ -1,10 +1,10 @@
 object MainFrm: TMainFrm
-  Left = -857
-  Top = 271
+  Left = 294
+  Top = 246
   BorderStyle = bsSingle
   Caption = #1052#1048#1054#1055' - '#1062#1059#1055
-  ClientHeight = 616
-  ClientWidth = 1289
+  ClientHeight = 498
+  ClientWidth = 1365
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -27,6 +27,14 @@ object MainFrm: TMainFrm
     Font.Name = 'MS Sans Serif'
     Font.Style = [fsBold, fsItalic]
     ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 832
+    Top = 88
+    Width = 441
+    Height = 336
+    Align = alCustom
+    Caption = 'Label2'
   end
   object MainMenu: TMainMenu
     Left = 8

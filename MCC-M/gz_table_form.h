@@ -33,7 +33,7 @@ __published:	// IDE-managed Components
         TLabel *nyp_1_str;
         TLabel *nyp_1_str2;
         TLabel *Label12;
-        TLabel *Label13;
+        TLabel *kz_time;
         TLabel *Label14;
         TLabel *Label15;
         TLabel *nyp_2_str;
@@ -59,10 +59,21 @@ __published:	// IDE-managed Components
         TLabel *Label36;
         TLabel *Label37;
         TLabel *Label38;
-        TLabel *Label39;
+        TLabel *GrinT;
         TLabel *Label40;
-        TLabel *Label41;
+        TLabel *hu_t;
         TLabel *Label42;
+        TLabel *Label10;
+        TLabel *obj_data2;
+        TLabel *Label16;
+        TLabel *obj_data3;
+        TLabel *Label39;
+        TLabel *obj_data4;
+        TLabel *Label43;
+        TLabel *obj_data5;
+        TLabel *Label45;
+        TLabel *scsc;
+        TLabel *RsMksSOY;
         void __fastcall DMB_timerTimer(TObject *Sender);
 private:	// User declarations
 public:		// User declarations

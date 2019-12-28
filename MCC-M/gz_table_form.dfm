@@ -1,6 +1,6 @@
 object gz_table_frm: Tgz_table_frm
-  Left = -626
-  Top = 888
+  Left = -237
+  Top = 312
   Width = 2168
   Height = 175
   Caption = #1048#1085#1092#1086#1088#1084#1072#1094#1080#1086#1085#1085#1086#1077' '#1090#1072#1073#1083#1086' '#1075#1083#1072#1074#1085#1086#1075#1086' '#1079#1072#1083#1072
@@ -16,14 +16,38 @@ object gz_table_frm: Tgz_table_frm
   object RsMksString: TLabel
     Left = 325
     Top = 7
-    Width = 1340
+    Width = 706
     Height = 27
-    Caption = 
-      #1056#1057' '#1052#1050#1057' ( "'#1047#1040#1056#1071'" / "'#1047#1042#1045#1047#1044#1040'" / "'#1055#1048#1056#1057'" / "'#1055#1054#1048#1057#1050'" / "'#1056#1040#1057#1057#1042#1045#1058'" / "'#1057#1054#1070 +
-      #1047' '#1052#1057'-12" / "'#1057#1054#1070#1047' '#1052#1057'-13" / "'#1055#1056#1054#1043#1056#1045#1057#1057' '#1052#1057'-12" )'
+    Caption = #1056#1057' '#1052#1050#1057' ( "'#1047#1040#1056#1071'" / "'#1047#1042#1045#1047#1044#1040'" / "'#1055#1048#1056#1057'" / "'#1055#1054#1048#1057#1050'" / "'#1056#1040#1057#1057#1042#1045#1058'" '
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clYellow
     Font.Height = -24
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label16: TLabel
+    Left = 576
+    Top = 58
+    Width = 18
+    Height = 24
+    Caption = ' / '
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -21
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 511
+    Top = 58
+    Width = 18
+    Height = 24
+    Caption = ' / '
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -21
     Font.Name = 'Arial'
     Font.Style = []
     ParentFont = False
@@ -33,7 +57,7 @@ object gz_table_frm: Tgz_table_frm
     Top = 50
     Width = 80
     Height = 22
-    Caption = '11 20 24'
+    Caption = '00 00 00'
     Font.Charset = ANSI_CHARSET
     Font.Color = clAqua
     Font.Height = -21
@@ -44,12 +68,12 @@ object gz_table_frm: Tgz_table_frm
   object Label2: TLabel
     Left = 50
     Top = 74
-    Width = 29
-    Height = 16
+    Width = 25
+    Height = 14
     Caption = #1044#1052#1042
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clSilver
-    Font.Height = -13
+    Font.Height = -11
     Font.Name = 'Arial'
     Font.Style = [fsBold]
     ParentFont = False
@@ -151,19 +175,6 @@ object gz_table_frm: Tgz_table_frm
     Width = 53
     Height = 24
     Caption = #1074#1080#1090#1086#1082
-    Font.Charset = RUSSIAN_CHARSET
-    Font.Color = clYellow
-    Font.Height = -21
-    Font.Name = 'Arial'
-    Font.Style = []
-    ParentFont = False
-  end
-  object obj_data: TLabel
-    Left = 464
-    Top = 58
-    Width = 87
-    Height = 24
-    Caption = '('#1076#1072#1085#1085#1099#1077')'
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clYellow
     Font.Height = -21
@@ -275,7 +286,7 @@ object gz_table_frm: Tgz_table_frm
     Font.Style = []
     ParentFont = False
   end
-  object Label13: TLabel
+  object kz_time: TLabel
     Left = 1248
     Top = 58
     Width = 83
@@ -613,12 +624,12 @@ object gz_table_frm: Tgz_table_frm
     Font.Style = []
     ParentFont = False
   end
-  object Label39: TLabel
+  object GrinT: TLabel
     Left = 2048
     Top = 18
     Width = 80
     Height = 22
-    Caption = '11 20 24'
+    Caption = '00 00 00'
     Font.Charset = ANSI_CHARSET
     Font.Color = clAqua
     Font.Height = -21
@@ -639,12 +650,12 @@ object gz_table_frm: Tgz_table_frm
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object Label41: TLabel
+  object hu_t: TLabel
     Left = 2048
     Top = 74
     Width = 80
     Height = 22
-    Caption = '11 20 24'
+    Caption = '00 00 00'
     Font.Charset = ANSI_CHARSET
     Font.Color = clAqua
     Font.Height = -21
@@ -663,6 +674,136 @@ object gz_table_frm: Tgz_table_frm
     Font.Height = -11
     Font.Name = 'Arial'
     Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label39: TLabel
+    Left = 640
+    Top = 58
+    Width = 18
+    Height = 24
+    Caption = ' / '
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -21
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label43: TLabel
+    Left = 707
+    Top = 58
+    Width = 18
+    Height = 24
+    Caption = ' / '
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -21
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label45: TLabel
+    Left = 773
+    Top = 58
+    Width = 18
+    Height = 24
+    Caption = ' / '
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -21
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object obj_data: TLabel
+    Left = 464
+    Top = 58
+    Width = 42
+    Height = 24
+    Caption = '1111'
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -21
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object obj_data2: TLabel
+    Left = 530
+    Top = 58
+    Width = 42
+    Height = 24
+    Caption = '1111'
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -21
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object obj_data3: TLabel
+    Left = 596
+    Top = 58
+    Width = 42
+    Height = 24
+    Caption = '1111'
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -21
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object obj_data4: TLabel
+    Left = 662
+    Top = 58
+    Width = 42
+    Height = 24
+    Caption = '1111'
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -21
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object obj_data5: TLabel
+    Left = 728
+    Top = 58
+    Width = 42
+    Height = 24
+    Caption = '1111'
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -21
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object scsc: TLabel
+    Left = 1658
+    Top = 7
+    Width = 20
+    Height = 27
+    Caption = ')'
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -24
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentFont = False
+  end
+  object RsMksSOY: TLabel
+    Left = 1031
+    Top = 7
+    Width = 183
+    Height = 27
+    Caption = '/ "'#1057#1054#1070#1047' '#1052#1057'-12"'
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clYellow
+    Font.Height = -24
+    Font.Name = 'Arial'
+    Font.Style = []
     ParentFont = False
   end
   object DMB_timer: TTimer

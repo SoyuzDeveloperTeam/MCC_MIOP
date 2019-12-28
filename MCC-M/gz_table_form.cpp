@@ -3,7 +3,7 @@
 #include <vcl.h>
 #pragma hdrstop
 #include <DateUtils.hpp>
-
+//#include "gz_table_settings.h"
 
 #include "gz_table_form.h"
 //---------------------------------------------------------------------------
@@ -12,42 +12,60 @@
 Tgz_table_frm *gz_table_frm;
 //---------------------------------------------------------------------------
 AnsiString RsMks[8]; //Состав строки РС МКС
-int Day; //День недели
+int Day;             //День недели
 AnsiString days[] = { "воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота" };
 
+//Only for test - DEBGGER
 AnsiString TestDate="19.09.19";
+AnsiString TestText="СОЮЗ МС-12";
 
 //Даты ввода в состав РС МКС объектов
 AnsiString ZARYA_LAUNCH_DATE="20.11.98";
-AnsiString DateString;
-AnsiString TimeString;
+AnsiString ZVEZDA_LAUNCH_DATE="12.07.00";
+AnsiString PIRS_LAUNCH_DATE="15.09.01";
+AnsiString POISK_LAUNCH_DATE="10.11.09";
+AnsiString RASSVET_LAUNCH_DATE="14.05.10";
+AnsiString TK_LAUNCH_DATE[4];
+
+// Переменные дата-время
+AnsiString DateString;  //Локальная дата
+AnsiString TimeStringM; //Moscow
+AnsiString TimeStringH; //Houston
+AnsiString TimeStringG; //GMT
 //---------------------------------------------------------------------------
-void PRisV(){
- /*RsMks[0]=
-   RsMks[1]=
- */
-}
+
 //---------------------------------------------------------------------------
 __fastcall Tgz_table_frm::Tgz_table_frm(TComponent* Owner)
         : TForm(Owner)
 {
-
 }
 //---------------------------------------------------------------------------
 
 void __fastcall Tgz_table_frm::DMB_timerTimer(TObject *Sender)    //Таймер 1000 мс
 {
-RsMks[5]="СОЮЗ МС-12";
+RsMks[5]="/ \""+TestText+"\" ";  // Первый корабль в строке
+RsMks[6]="/ \""+TestText+"\" ";  // Второй корабль в строке
+RsMks[7]="/ \""+TestText+"\" ";  // Третий корабль в строке
+
 Day = DayOfWeek(Now());                             //Текущий день недели
 day_name->Caption=days[Day-1];                      //Проверка номера дня
-RsMksString->Caption="РС МКС ( \"ЗАРЯ\" / \"ЗВЕЗДА\" \"ПИРС\" / \"ПОИСК\" / \"РАССВЕТ\" / \"",RsMks[5],"\" / \"";         //Строка РС МКС
+RsMksString->Caption="РС МКС ( \"ЗАРЯ\" / \"ЗВЕЗДА\" \"ПИРС\" / \"ПОИСК\" / \"РАССВЕТ\"";         //Строка РС МКС
+RsMksSOY->Caption=RsMks[5],RsMks[6],RsMks[7];
 DayYearN->Caption=IntToStr(DayOfTheYear(Now()));    //Сутки года
 date_string->Caption=DateString;                    //Вывод даты локальной
 DateString = FormatDateTime("mm/dd/yy", Now());     //Форматирование даты ДД-ММ-ГГ
-TimeString = FormatDateTime("hh/nn/ss", Now());     //Форматирование времени ЧЧ-ММ-СС
-dmt->Caption=TimeString;                            //Вывод времени локального
-obj_data->Caption=IntToStr(DaysBetween(ZARYA_LAUNCH_DATE,/*Now()*/TestDate));                             //Сутки полета объектов
-
+TimeStringM = FormatDateTime("hh/nn/ss", Now());     //Форматирование времени ЧЧ-ММ-СС для ДМВ
+TimeStringG = FormatDateTime("hh/nn/ss", Now());     //Форматирование времени ЧЧ-ММ-СС для GMT  !!!ПЕРЕДЕЛАТЬ
+dmt->Caption=TimeStringM;                            //Вывод времени локального
+obj_data->Caption=IntToStr(DaysBetween(ZARYA_LAUNCH_DATE,Now())+1);     //Сутки полета объектов
+obj_data2->Caption=IntToStr(DaysBetween(ZVEZDA_LAUNCH_DATE,Now())+1);
+obj_data3->Caption=IntToStr(DaysBetween(PIRS_LAUNCH_DATE,Now())+1);
+obj_data4->Caption=IntToStr(DaysBetween(POISK_LAUNCH_DATE,Now()));
+obj_data5->Caption=IntToStr(DaysBetween(RASSVET_LAUNCH_DATE,Now()));
+GrinT->Caption=TimeStringG;
+hu_t->Caption=TimeStringM;
+scsc->Left=RsMksSOY->Left+RsMksSOY->Width;
+kz_time->Caption=RsMksSOY->Width;
 }
 //---------------------------------------------------------------------------
 

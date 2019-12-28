@@ -26,6 +26,7 @@ __published:	// IDE-managed Components
         TMenuItem *N10;
         TMenuItem *N11;
         TMenuItem *gztzblesett;
+        TLabel *Label2;
         void __fastcall N8Click(TObject *Sender);
         void __fastcall gztzblesettClick(TObject *Sender);
 private:	// User declarations
